@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2007AAAD236C6B61007B14E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007AAAC236C6B61007B14E3 /* AppDelegate.swift */; };
 		2007AAAF236C6B61007B14E3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2007AAAE236C6B61007B14E3 /* art.scnassets */; };
-		2007AAB1236C6B61007B14E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007AAB0236C6B61007B14E3 /* ViewController.swift */; };
+		2007AAB1236C6B61007B14E3 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007AAB0236C6B61007B14E3 /* ARViewController.swift */; };
 		2007AAB4236C6B62007B14E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2007AAB2236C6B61007B14E3 /* Main.storyboard */; };
 		2007AAB6236C6B64007B14E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2007AAB5236C6B64007B14E3 /* Assets.xcassets */; };
 		2007AAB9236C6B64007B14E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2007AAB7236C6B64007B14E3 /* LaunchScreen.storyboard */; };
+		2022C8CC2374B1FC00D229BB /* ImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022C8CB2374B1FC00D229BB /* ImageMapper.swift */; };
+		2022C8D32374B26100D229BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022C8D22374B26100D229BB /* AppDelegate.swift */; };
+		2022C8D52374B59F00D229BB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022C8D42374B59F00D229BB /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2007AAA9236C6B61007B14E3 /* ARKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2007AAAC236C6B61007B14E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2007AAAE236C6B61007B14E3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		2007AAB0236C6B61007B14E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2007AAB0236C6B61007B14E3 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		2007AAB3236C6B61007B14E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2007AAB5236C6B64007B14E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2007AAB8236C6B64007B14E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2007AABA236C6B64007B14E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2022C8CB2374B1FC00D229BB /* ImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMapper.swift; sourceTree = "<group>"; };
+		2022C8D22374B26100D229BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2022C8D42374B59F00D229BB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		2007AAAB236C6B61007B14E3 /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2007AAAC236C6B61007B14E3 /* AppDelegate.swift */,
-				2007AAAE236C6B61007B14E3 /* art.scnassets */,
-				2007AAB0236C6B61007B14E3 /* ViewController.swift */,
-				2007AAB2236C6B61007B14E3 /* Main.storyboard */,
-				2007AAB5236C6B64007B14E3 /* Assets.xcassets */,
-				2007AAB7236C6B64007B14E3 /* LaunchScreen.storyboard */,
+				2022C8CD2374B21000D229BB /* Views */,
+				2022C8CF2374B21E00D229BB /* Controllers */,
+				2022C8D02374B22500D229BB /* Models */,
+				2022C8D12374B23700D229BB /* Supporting files */,
 				2007AABA236C6B64007B14E3 /* Info.plist */,
 			);
 			path = ARKitDemo;
+			sourceTree = "<group>";
+		};
+		2022C8CD2374B21000D229BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2007AAB2236C6B61007B14E3 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2022C8CF2374B21E00D229BB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2007AAB0236C6B61007B14E3 /* ARViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2022C8D02374B22500D229BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2022C8CB2374B1FC00D229BB /* ImageMapper.swift */,
+				2022C8D42374B59F00D229BB /* Image.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2022C8D12374B23700D229BB /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				2007AAB5236C6B64007B14E3 /* Assets.xcassets */,
+				2007AAAE236C6B61007B14E3 /* art.scnassets */,
+				2022C8D22374B26100D229BB /* AppDelegate.swift */,
+				2007AAB7236C6B64007B14E3 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2007AAB1236C6B61007B14E3 /* ViewController.swift in Sources */,
-				2007AAAD236C6B61007B14E3 /* AppDelegate.swift in Sources */,
+				2022C8D32374B26100D229BB /* AppDelegate.swift in Sources */,
+				2022C8D52374B59F00D229BB /* Image.swift in Sources */,
+				2022C8CC2374B1FC00D229BB /* ImageMapper.swift in Sources */,
+				2007AAB1236C6B61007B14E3 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

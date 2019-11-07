@@ -1,0 +1,17 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "resources" : [
+    {
+      "filename" : "MonaLisa.arreferenceimage"
+    },
+    {
+      "filename" : "TheScream.arreferenceimage"
+    },
+    {
+      "filename" : "TheStarryNight.arreferenceimage"
+    }
+  ]
+}
