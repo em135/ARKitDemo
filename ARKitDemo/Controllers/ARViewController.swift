@@ -20,7 +20,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         // AR configurations
         configuation = ARWorldTrackingConfiguration()
-        configuation.planeDetection = [.horizontal, .vertical]
+        configuation.planeDetection = .horizontal
         configuation.detectionImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil)
 
         // Set a scene to the view
@@ -50,7 +50,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
 
         if let imageID = referenceImage.name, let image = imageMapper.images[imageID] {
             DispatchQueue.main.async {
-                let alert = UIAlertController(title: image.name, message: "Author: \(image.author).\nPainted in \(image.year).", preferredStyle: .alert)
+                let alert = UIAlertController(title: image.name, message: "Author is \(image.author).\nPainted in \(image.year).", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
